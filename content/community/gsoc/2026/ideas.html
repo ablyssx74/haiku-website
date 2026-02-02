@@ -167,6 +167,7 @@ We don't want people to instead use closed-source software or undocumented proto
 </ul>
 
 
+<!-- Needs mentors, mmu_man has not confirmed participation. Maybe it's better to focus on QEMU anyways
 <h4><img src="/images/App_Generic_32.png"/>VirtualBox port to Haiku</h4>
 
 <p>VirtualBox is a virtual machine allowing to run an operating system inside of another. Porting it to Haiku would allow Haiku users to run another system, such as Windows or Linux, when they need to run an application that is not yet available for Haiku. This would make using Haiku as their primary operating system a viable approach for more people.</p>
@@ -179,8 +180,9 @@ We don't want people to instead use closed-source software or undocumented proto
 	<li>Difficulty: hard</li>
 	<li>Expected outcome: a version of Virtualbox that runs on Haiku and is able to run other operating systems.</li>
 </ul>
+-->
 
-<!--
+<!-- Completed in previous years but working too slow, idea to be rewritten with the current status
 <h4><img src="/images/App_Generic_32.png"/>Hardware acceleration for Haiku's QEMU port</h4>
 
 <p>QEMU is a virtual machine which allows running an operating system inside of another. While there already is a Haiku port, it currently does not support any acceleration system through native virtualization (through Intel VT-x and AMD SVM.) This makes it too slow for many uses. Fixing this would allow Haiku users to run another system, such as Windows or Linux, when they need to run an application that is not yet available for Haiku. This would make using Haiku as their primary operating system a viable approach for more people.</p>
@@ -486,9 +488,9 @@ Skill set: kernel, and driver development
 <li><a href="http://en.wikipedia.org/wiki/Xfs">XFS</a> (<a href="http://xfs.org/index.php/Main_Page">Development community</a>, <a href="http://oss.sgi.com/projects/xfs/index.html">homepage</a>) is a filesystem originally developed for the IRIX operating system. Today it is commonly used by Haiku developers who build Haiku from Linux, because of its better support for extended filesystem attributes (unlike ext4). The read-only support is generally complete but does not use any caching yet. Adjusting the filesystem to use the block and file caches would be a good way to start this project.
 
 <li><a href="http://en.wikipedia.org/wiki/Unix_File_System">UFS2</a> (<a href="https://github.com/freebsd/freebsd/tree/master/sys/ufs/ufs">FreeBSD implementation</a>, <a href="http://sourceforge.net/p/ufs2tools/code/HEAD/tree/trunk/ufs2tools/">u2fstools for windows</a>) is the default filesystem in FreeBSD, commonly used by some Haiku developers as well. It is closely based on the original Unix filesystem, which is implemented in many other operating system. The original design is quite simple, however the different implementations in various systems make it a bit more complex to handle all cases. Focusing specifically on the FreeBSD variant is acceptable for this project if needed. In its current state, the UFS2 driver works in fs_shell but crashes when used as an actual filesystem in Haiku, investigating and fixing this problem would be a good way to start this project.</li>
-</ul>
 
 <li>ExFAT is an improved version of Microsoft's FAT filesystem. It is designed for removable drives and used on large size USB thumb drives and SD cards. There is not yet any write support in Haiku's ExFAT driver.</li>
+</ul>
 
 <h5>Why we need this</h5>
 
