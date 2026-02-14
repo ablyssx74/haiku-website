@@ -50,4 +50,5 @@ To have Haiku on a system shared with multiple EFI operating systems, you can us
     * **BOOT** (directory)
       * **BOOTX64.EFI** (boot mananger such as [rEFInd](https://www.rodsbooks.com/refind/))
 
-In this configuration, ```refind_x64.efi``` was renamed to ```BOOTX64.EFI```.  rEFInd will boot first by default, and will detect HAIKU as a boot option.
+In this configuration, ```refind_x64.efi``` was renamed to ```BOOTX64.EFI```
+rEFInd will boot first by default, and will detect HAIKU as a boot option.
